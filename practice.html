@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avgamah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="google-translate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style type="text/css">
+ 
+
+        
+        /*google translate Dropdown */
+        
+        #google_translate_element select{
+        background:#f6edfd;
+        color:#383ffa;
+        border: none;
+        border-radius:3px;
+        padding:6px 8px
+        }
+        
+        /*google translate link | logo */
+          .goog-logo-link{
+          display:none!important;
+          }
+        .goog-te-gadget{
+        color:transparent!important;
+        }
+        
+        /* google translate banner-frame */
+        
+        .goog-te-banner-frame{
+        display:none !important;
+        }
+        
+        #goog-gt-tt, .goog-te-balloon-frame{display: none !important;}
+       .goog-text-highlight { background: none !important; box-shadow: none !important;}
+        </style>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+        }
+    
+       function triggerHtmlEvent(element, eventName) {
+         var event;
+         if (document.createEvent) {
+          event = document.createEvent('HTMLEvents');
+          event.initEvent(eventName, true, true);
+          element.dispatchEvent(event);
+         } else {
+          event = document.createEventObject();
+          event.eventType = eventName;
+          element.fireEvent('on' + event.eventType, event);
+         }
+       }
+    
+       jQuery('.lang-select').click(function() {
+         var theLang = jQuery(this).attr('data-lang');
+         jQuery('.goog-te-combo').val(theLang);
+    
+         //alert(jQuery(this).attr('href'));
+         window.location = jQuery(this).attr('href');
+         location.reload();
+    
+       });
+    </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+
+<body>
+
+<div id="google_element"></div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="images/Avgamah.png" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto pr-3 mt-2 w-30 d-flex justify-content-around">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Notes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Competitive Programming</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Videos</a>
+            </li>
+        </ul>
+
+        <ul id="darkbutton" class="navbar-nav">
+            <li class="nav-item">
+
+                <a class="nav-link"  href="#"><i style="padding-left: 50px;" class="bi bi-brightness-high-fill" id="toggleDark"></i></a>
+            </li>
+            <li>
+                <a class="nav-link" href="#"> 
+                    
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="login.html" id="loginsignup" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login/Sign
+                    Up</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<h1>Sayak Mallick</h1>
+
+
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
